@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <!--
 /*
 ** Copyright 2011, The Android Open Source Project
@@ -16,7 +16,6 @@
 ** limitations under the License.
 */
 -->
-
 <!-- These resources are around just to allow their values to be customized
      for different hardware and product builds. -->
 <resources>
@@ -32,25 +31,11 @@
 
          Must be overridden in platform specific overlays -->
     <integer-array name="config_autoBrightnessLevels">
-        <item>6</item>
-        <item>9</item>
-        <item>14</item>
-        <item>20</item>
         <item>30</item>
-        <item>46</item>
-        <item>68</item>
-        <item>103</item>
-        <item>154</item>
-        <item>231</item>
-        <item>346</item>
-        <item>519</item>
-        <item>778</item>
-        <item>1168</item>
-        <item>1752</item>
-        <item>2627</item>
-        <item>3941</item>
-        <item>5912</item>
-        <item>8867</item>
+        <item>150</item>
+        <item>600</item>
+        <item>1500</item>
+        <item>15000</item>
     </integer-array>
 
     <!-- Array of output values for LCD backlight corresponding to the LUX values
@@ -58,26 +43,12 @@
          than the size of the config_autoBrightnessLevels array.
          This must be overridden in platform specific overlays -->
     <integer-array name="config_autoBrightnessLcdBacklightValues">
-        <item>19</item>   <!-- 0-6 -->
-        <item>23</item>   <!-- 6-8 -->
-        <item>26</item>   <!-- 8-14 -->
-        <item>30</item>   <!-- 14-19 -->
-        <item>34</item>   <!-- 20-30 -->
-        <item>39</item>   <!-- 30-46 -->
-        <item>45</item>   <!-- 45-68 -->
-        <item>51</item>   <!-- 67-103 -->
-        <item>59</item>   <!-- 102-154 -->
-        <item>67</item>   <!-- 153-231 -->
-        <item>77</item>   <!-- 230-346 -->
-        <item>88</item>   <!-- 346-519 -->
-        <item>101</item>  <!-- 519-778 -->
-        <item>116</item>  <!-- 778-1168 -->
-        <item>133</item>  <!-- 1168-1752 -->
-        <item>152</item>  <!-- 1752-2627 -->
-        <item>174</item>  <!-- 2627-3941 -->
-        <item>199</item>  <!-- 3941-5912 -->
-        <item>228</item>  <!-- 5912-8867 -->
-        <item>250</item>  <!-- 8868+ -->
+        <item>34</item>
+        <item>48</item>
+        <item>84</item>
+        <item>103</item>
+        <item>191</item>
+        <item>255</item>
     </integer-array>
 
     <!-- Array of output values for button backlight corresponding to the LUX values
@@ -85,22 +56,8 @@
          than the size of the config_autoBrightnessLevels array.
          This must be overridden in platform specific overlays -->
     <integer-array name="config_autoBrightnessButtonBacklightValues">
-        <item>0</item>
-        <item>0</item>
-        <item>0</item>
-        <item>0</item>
-        <item>0</item>
-        <item>0</item>
-        <item>0</item>
-        <item>0</item>
-        <item>0</item>
-        <item>0</item>
-        <item>0</item>
-        <item>0</item>
-        <item>0</item>
-        <item>0</item>
-        <item>0</item>
-        <item>0</item>
+        <item>255</item>
+        <item>255</item>
         <item>0</item>
         <item>0</item>
         <item>0</item>
@@ -112,22 +69,8 @@
          than the size of the config_autoBrightnessLevels array.
          This must be overridden in platform specific overlays -->
     <integer-array name="config_autoBrightnessKeyboardBacklightValues">
-        <item>0</item>
-        <item>0</item>
-        <item>0</item>
-        <item>0</item>
-        <item>0</item>
-        <item>0</item>
-        <item>0</item>
-        <item>0</item>
-        <item>0</item>
-        <item>0</item>
-        <item>0</item>
-        <item>0</item>
-        <item>0</item>
-        <item>0</item>
-        <item>0</item>
-        <item>0</item>
+        <item>255</item>
+        <item>255</item>
         <item>0</item>
         <item>0</item>
         <item>0</item>
@@ -135,5 +78,5 @@
     </integer-array>
 
     <!-- Minimum screen brightness allowed by the power manager. -->
-    <integer name="config_screenBrightnessDim">5</integer>
+    <integer name="config_screenBrightnessDim">10</integer>
 </resources>

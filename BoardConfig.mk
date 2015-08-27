@@ -1,4 +1,4 @@
-# Copyright (C) 2014 The CyanogenMod Project
+# Copyright (C) 2009 The CyanogenMod Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -12,33 +12,40 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
+#
+# This file sets variables that control the way modules are built
+# thorughout the system. It should not be used to conditionally
+# disable makefiles (the proper mechanism to control what gets
+# included in a build is to use PRODUCT_PACKAGES in a product
+# definition file).
+#
+
 # inherit from common quincy
 -include device/samsung/quincy-common/BoardConfigCommon.mk
 
 # inherit from the proprietary version
 -include vendor/samsung/quincydcm/BoardConfigVendor.mk
 
+TARGET_BOOTLOADER_BOARD_NAME := MSM8660_SURF
+
 # Assert
 TARGET_OTA_ASSERT_DEVICE := SC-05D,quincydcm
 TARGET_BOARD_INFO_FILE ?= device/samsung/quincydcm/board-info.txt
+
+# Resoultion
+DEVICE_RESOLUTION := 800x1280
 
 # Kernel
 TARGET_KERNEL_CONFIG := cyanogenmod_quincydcm_defconfig
 
 # Partitions
-BOARD_FLASH_BLOCK_SIZE := 131072
+TARGET_USERIMAGES_USE_EXT4 := true
+TARGET_USERIMAGES_USE_F2FS := true
 BOARD_BOOTIMAGE_PARTITION_SIZE := 0x00A00000
 BOARD_RECOVERYIMAGE_PARTITION_SIZE := 0x00A00000
 BOARD_SYSTEMIMAGE_PARTITION_SIZE := 536870912
 BOARD_USERDATAIMAGE_PARTITION_SIZE := 536870912
-TARGET_USERIMAGES_USE_EXT4 := true
-TARGET_USERIMAGES_USE_F2FS := true
+BOARD_FLASH_BLOCK_SIZE := 131072
 
 # Bluetooth
 BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := device/samsung/quincydcm/bluetooth
-
-# Secondary sdcard
-BOARD_SDCARD_DEVICE_SECONDARY := /dev/block/mmcblk0p29
-
-# Vold
-BOARD_VOLD_MAX_PARTITIONS := 29

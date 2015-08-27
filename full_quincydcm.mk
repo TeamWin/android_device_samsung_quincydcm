@@ -20,21 +20,25 @@
 # details, it only fundamentally contains two inherit-product
 # lines, full and maguro, hence its name.
 #
+ 
+# Torch
+PRODUCT_PACKAGES := \
+    Torch
+
+BOARD_HAVE_NFC := true
+
+# Ramdisk
+PRODUCT_COPY_FILES += \
+    device/samsung/quincydcm/ramdisk/initlogo.rle:root/initlogo.rle
 
 # Inherit from those products. Most specific first.
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
-
 # Inherit from quincydcm device
 $(call inherit-product, device/samsung/quincydcm/device.mk)
-
-# quincydcm Ramdisk
-PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/ramdisk/fstab.qcom:root/fstab.qcom \
-    $(LOCAL_PATH)/ramdisk/initlogo.rle:root/initlogo.rle
 
 # Set those variables here to overwrite the inherited values.
 PRODUCT_NAME := full_quincydcm
 PRODUCT_DEVICE := quincydcm
 PRODUCT_BRAND := samsung
 PRODUCT_MANUFACTURER := samsung
-PRODUCT_MODEL := SC-05D
+PRODUCT_MODEL := SAMSUNG-SC-05D

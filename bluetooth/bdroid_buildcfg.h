@@ -18,6 +18,6 @@
 #ifndef _BDROID_BUILDCFG_H
 #define _BDROID_BUILDCFG_H
 
-#define BTM_DEF_LOCAL_NAME "SC-05D"
+#define BTM_DEF_LOCAL_NAME   "Samsung SC-05D"
 
 #endif
